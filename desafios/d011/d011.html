@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Astronauta no Espaço</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section#fundo{
+            position: relative; /* Para permitir o absolute no astronauta */
+            background-image: url('espaco.jpg');
+            background-color: black;
+            height: 100vh; /* 100% da tela */
+            background-size: cover; /* Imagem sempre exibida na tela */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        article#astronauta {
+            position: absolute;
+            background-image: url('astronauta.png');
+            background-color: none;
+            background-size: cover;
+            height: 50vh;
+            width: 50vh;
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="fundo">
+        <article id="astronauta">
+
+        </article>
+    </section>
+</body>
+</html>
