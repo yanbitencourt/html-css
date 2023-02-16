@@ -23,6 +23,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -34,6 +35,16 @@
         thead, tfoot {
             background-color: dodgerblue;
             color: white;
+        }
+
+        thead > tr > th  {
+            position: sticky;
+            top: -1;
+            background-color: dodgerblue;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: rgba(30, 143, 255, 0.274);
         }
 
         .num {
