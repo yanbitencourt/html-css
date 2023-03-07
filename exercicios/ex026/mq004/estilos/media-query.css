@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* Todas as demais midias */
+
+/* TYPICAL DEVICE BREAKPOINTS
+
+Pequenas telas: < 600px
+Celular: 600px < e > 768px
+Tablet: 768px < e > 992px
+Desktop: 992px < e > 1200px
+Grandes telas: > 1200
+*/
+
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* Desnecessário */
+    }
+
+    main {
+        border: 2px solid black;
+        width: 90vw;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: rgb(0, 0, 0);
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do github';
+        text-decoration: overline;
+    }
+    #tel {
+        display: none;
+    }
+    
+    #tab {
+        display: none;
+    }
+    #imp {
+        display: block;
+    }
+    #pc {
+        display: none;
+    }
+    
+    #tv {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    #tel {
+        display: none;
+    }
+    
+    #tab {
+        display: block;
+    }
+    #imp {
+        display: none;
+    }
+    #pc {
+        display: none;
+    }
+    
+    #tv {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* DESKTOP */
+    body {
+        background-image: url(../imagens/back-pc.jpg)
+    }
+    #tel {
+        display: none;
+    }
+    
+    #tab {
+        display: none;
+    }
+    #imp {
+        display: none;
+    }
+    #pc {
+        display: block;
+    }
+    
+    #tv {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px){ /* GRANDES TELAS */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+
+    #tel {
+        display: none;
+    }
+    
+    #tab {
+        display: none;
+    }
+    #imp {
+        display: none;
+    }
+    #pc {
+        display: none;
+    }
+    
+    #tv {
+        display: block;
+    }
+}
